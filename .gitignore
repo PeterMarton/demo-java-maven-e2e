@@ -1,0 +1,9 @@
+/target/
+/.git
+/.idea
+/.settings
+/logs
+/build
+/test-output
+.classpath
+.project

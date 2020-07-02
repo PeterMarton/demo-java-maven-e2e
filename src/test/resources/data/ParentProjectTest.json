@@ -1,0 +1,9 @@
+{
+	"basicFileUpload": {
+		"fileName": "template.zip"
+	},
+	
+	"createChildWikiPage": {
+		"childPageName": "Arnold Simpson"
+	}
+}

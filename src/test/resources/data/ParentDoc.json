@@ -1,0 +1,12 @@
+{
+	"basicFileUpload": {
+		"credentials": {
+			"userName": "failedLogin",
+			"password": "failedLogin"
+		},
+		"fileName": "template.zip"
+	},
+	"createChildWikiPage": {
+		"childPageName": "Arnold Simpson"
+	}
+}

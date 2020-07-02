@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration PUBLIC
+  "-//APACHE//DTD LOG4J 1.2//EN" "https://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/xml/doc-files/log4j.dtd">
+<log4j:configuration
+	xmlns:log4j="http://jakarta.apache.org/log4j/" debug="false">
+
+	<appender name="console"
+		class="org.apache.log4j.ConsoleAppender">
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="%d{yyyy-MM-dd HH:mm:ss} %-5p %c{5}:%L - %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="file"
+		class="org.apache.log4j.RollingFileAppender">
+		<param name="append" value="false" />
+		<param name="maxFileSize" value="1MB" />
+		<param name="maxBackupIndex" value="3" />
+		<param name="file" value="./logs/reference_demo_test.log" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="%d{yyyy-MM-dd HH:mm:ss} %-5p %c{5}:%L - %m%n" />
+		</layout>
+	</appender>
+
+	<logger name="org.reference" additivity="false">
+		<level value="DEBUG" />
+		<appender-ref ref="console" />
+	</logger>
+
+	<logger name="io.github.bonigarcia" additivity="false">
+		<level value="INFO" />
+		<appender-ref ref="console" />
+	</logger>
+
+	<logger name="com.codeborne.selenide" additivity="false">
+		<level value="INFO" />
+		<appender-ref ref="console" />
+
+	</logger>
+
+	<root>
+		<level value="DEBUG" />
+		<appender-ref ref="file" />
+	</root>
+
+</log4j:configuration>
